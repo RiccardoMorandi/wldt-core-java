@@ -384,7 +384,7 @@ In order to publish the PAD we can update the onAdapterStart method with the fol
 ```java
 private final static String TEMPERATURE_PROPERTY_KEY = "temperature-property-key";
 private final static String OVERHEATING_EVENT_KEY = "overheating-event-key";
-private final static String SET_TEMPERATURE_ACTION_KEY = "set-temperatura-action-key";
+private final static String SET_TEMPERATURE_ACTION_KEY = "set-temperature-action-key";
 
 @Override
 public void onAdapterStart() {
@@ -781,10 +781,7 @@ protected void onDigitalTwinBound(Map<String, PhysicalAssetDescription> adapters
 
         //Iterate over all the received PAD from connected Physical Adapters
         adaptersPhysicalAssetDescriptionMap.values().forEach(pad -> {
-
-            //Iterate over all the received PAD from connected Physical Adapters
-            adaptersPhysicalAssetDescriptionMap.values().forEach(pad -> {
-                pad.getProperties().forEach(property -> {
+            pad.getProperties().forEach(property -> {
                 try {
                     
                     //Create and write the property on the DT's State
